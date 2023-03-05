@@ -290,6 +290,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
@@ -300,7 +301,7 @@
           </p>
         </div>
         <div class="footer-socials">
-          <p>Social media</p>
+          <p class="footer-title">Social media</p>
           <ul class="social-list list">
             <li class="social-item">
               <a href="" class="social-link">
@@ -332,6 +333,26 @@
             </li>
           </ul>
         </div>
+        <form class="footer-form-sibscribe">
+          <p class="footer-title">Subscribe</p>
+          <div class="footer-form-items-wrap">
+            <label class="footer-sibscribe-email">
+              <input
+                type="email"
+                class="footer-email-input"
+                name="user-email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button class="footer-subscribe-button button-brand">
+              <span>Subscribe</span>
+              <svg class="icon-subscribe" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
   </body>

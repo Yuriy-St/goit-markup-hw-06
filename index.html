@@ -66,7 +66,11 @@
           <h1 class="hero-title text-centered">
             Effective Solutions for Your Business
           </h1>
-          <button type="button" class="hero-button" data-modal-open>
+          <button
+            type="button"
+            class="hero-button button-brand"
+            data-modal-open
+          >
             Order Service
           </button>
         </div>
@@ -398,7 +402,7 @@
           </p>
         </div>
         <div class="footer-socials">
-          <p>Social media</p>
+          <p class="footer-title">Social media</p>
           <ul class="social-list list">
             <li class="social-item">
               <a href="" class="social-link">
@@ -430,6 +434,26 @@
             </li>
           </ul>
         </div>
+        <form class="footer-form-sibscribe">
+          <p class="footer-title">Subscribe</p>
+          <div class="footer-form-items-wrap">
+            <label class="footer-sibscribe-email">
+              <input
+                type="email"
+                class="footer-email-input"
+                name="user-email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button class="footer-subscribe-button button-brand">
+              <span>Subscribe</span>
+              <svg class="icon-subscribe" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
 
@@ -441,6 +465,64 @@
             <use href="./images/sprite.svg#close-cross"></use>
           </svg>
         </button>
+        <form class="form-order">
+          <p class="form-order-title">
+            Leave your contacts and we will call you back
+          </p>
+          <label class="form-order-label">
+            <span class="form-order-label-desc">Name</span>
+            <span class="form-order-input-wrap">
+              <input class="form-order-input" type="text" name="user-name" />
+              <svg class="icon-input" width="18" height="24">
+                <use href="./images/sprite.svg#person"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form-order-label">
+            <span class="form-order-label-desc">Phone</span>
+            <span class="form-order-input-wrap">
+              <input class="form-order-input" type="tel" name="user-phone" />
+              <svg class="icon-input" width="18" height="24">
+                <use href="./images/sprite.svg#phone"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form-order-label">
+            <span class="form-order-label-desc">Email</span>
+            <span class="form-order-input-wrap">
+              <input class="form-order-input" type="email" name="user-email" />
+              <svg class="icon-input" width="18" height="24">
+                <use href="./images/sprite.svg#email"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="form-order-label comment">
+            <span class="form-order-label-desc">Coment</span>
+            <textarea
+              class="form-user-comment"
+              name="user-comment"
+              placeholder="Text input"
+            ></textarea>
+          </label>
+          <input
+            class="form-user-policy-chk"
+            id="user-policy"
+            type="checkbox"
+            name="accept-policy"
+          />
+          <label class="form-user-policy-label" for="user-policy">
+            <span class="user-policy-chk-fake">
+              <svg class="icon-chk" width="10" height="7">
+                <use href="./images/sprite.svg#check"></use>
+              </svg>
+            </span>
+            I accept the terms and conditions of the&nbsp;
+            <a href="#">Privacy Policy</a>
+          </label>
+          <button class="form-order-send-btn button-brand" type="submit">
+            Send
+          </button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
