@@ -253,16 +253,20 @@ address {
 
 .footer .container {
   display: flex;
-  gap: 120px;
 }
 
 .footer-content {
   width: 264px;
+  margin-right: 120px;
 }
 
 .footer-title {
   font-weight: 500;
   margin-bottom: 16px;
+}
+
+.footer-socials {
+  margin-right: 80px;
 }
 
 .footer-socials .social-link {
@@ -618,12 +622,12 @@ address {
 }
 
 .modal {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
   max-width: 408px;
-  background: var(--color-light);
+  background: #fcfcfc;
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -641,6 +645,23 @@ address {
   background: var(--color-accent);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: background var(--transition-dur-and-func),
+    border var(--transition-dur-and-func);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  background-color: var(--color-pressed-state);
+  border-color: var(--color-pressed-state);
+}
+
+.modal-close-icon {
+  transition: fill var(--transition-dur-and-func);
+}
+
+.modal-close:hover .modal-close-icon,
+.modal-close:focus .modal-close-icon {
+  fill: var(--color-white);
 }
 
 .form-order {
@@ -749,12 +770,26 @@ address {
   border: 1.25px solid var(--color-dark);
   border-radius: 2px;
   margin-right: 8px;
-  transform: border var(--transition-dur-and-func);
+  transform: background var(--transition-dur-and-func),
+    border var(--transition-dur-and-func);
 }
 
 .icon-chk {
   visibility: hidden;
+  fill: var(--color-light);
   transform: visibility var(--transition-dur-and-func);
+}
+
+.form-user-policy-chk:checked + .form-user-policy-label .user-policy-chk-fake {
+  border-color: var(--color-pressed-state);
+  background-color: var(--color-pressed-state);
+}
+
+.form-user-policy-chk:checked:focus
+  + .form-user-policy-label
+  .user-policy-chk-fake {
+  border-color: var(--color-dark);
+  background-color: var(--color-pressed-state);
 }
 
 .form-user-policy-chk:checked + .form-user-policy-label .icon-chk {
